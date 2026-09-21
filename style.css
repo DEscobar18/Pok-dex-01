@@ -1,0 +1,431 @@
+/* ÁREA LATERAL / MENU */
+
+div#area {
+    /* Faz o menu ficar fixo na tela */
+    position: fixed;
+
+    /* Cor de fundo do menu */
+    background: rgb(250, 249, 249);
+
+    /* Faz o menu começar no topo */
+    top: 0;
+
+    /* Faz o menu começar no lado esquerdo */
+    left: 0;
+
+    /* Largura do menu */
+    width: 250px;
+
+    /* Ocupa 100% da altura da tela */
+    height: 100vh;
+
+    /* Linha na lateral direita do menu */
+    border-right: 1px solid #c4c1c1;
+}
+
+
+/*  CAMPO DE PESQUISA */
+
+input#pesquisa {
+
+    /* Largura do campo */
+    width: 1200px;
+
+    /* Altura do campo */
+    height: 35px;
+
+    /* Espaço acima do campo */
+    margin-top: 40px;
+
+    /* Arredonda os cantos */
+    border-radius: 10px;
+
+    /* Cria uma borda cinza */
+    border: 1px solid #c4c1c1;
+
+    /* Espaço entre a borda e o texto */
+    padding-left: 20px;
+
+    /* Faz o input ocupar sua própria linha */
+    display: block;
+}
+
+
+/* TÍTULO DO MENU LATERAL */
+
+#harea {
+
+    /* Cor do texto */
+    color: #050505;
+
+    /* Tipo e tamanho da fonte */
+    font: normal 20pt arial;
+
+    /* Espaço da esquerda */
+    margin-left: 20px;
+
+    /* Espaço do topo */
+    margin-top: 20px;
+
+    font-weight: bold;
+}
+
+
+/* BOTÕES DO MENU LATERAL */
+
+div#area button {
+
+    /* Faz cada botão ficar em uma linha */
+    display: block;
+
+    /* Largura dos botões */
+    width: 200px;
+
+    /* Altura dos botões */
+    height: 40px;
+
+    /* Distância do lado esquerdo */
+    margin-left: 10px;
+
+    /* Espaço entre um botão e outro */
+    margin-top: 15px;
+
+    /* Remove a borda padrão */
+    border: none;
+
+    /* Arredonda os cantos */
+    border-radius: 8px;
+
+    /* Cor da font */
+    color: black;
+    /* Cor de fundo */
+    background: white;
+
+    /* Alinha o texto à esquerda */
+    text-align: left;
+
+    /* Espaço entre o texto e o lado esquerdo */
+    padding-left: 15px;
+
+    /* Mostra a mãozinha quando passa o mouse */
+    cursor: pointer;
+}
+
+
+/* ÁREA PRINCIPAL */
+
+div#body {
+
+    /* Deixa espaço para o menu lateral */
+    margin-left: 270px;
+
+    /* Espaçamento interno:
+       35px em cima/baixo
+       60px esquerda/direita */
+    padding: 35px 60px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+div#body h1 {
+
+    /* Remove a margem padrão */
+    margin: 0;
+
+    /* Fonte Arial com tamanho de 30pt */
+    font: normal 30pt arial;
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+}
+
+
+/* TEXTO ABAIXO DO TÍTULO */
+
+div#body p {
+
+    /* Remove a margem padrão */
+    margin: 0;
+
+    /* Define fonte, tamanho e estilo */
+    font: normal 10pt arial;
+
+    /* Deixa o texto cinza */
+    color: grey;
+}
+
+
+/*  BOTÕES DOS FILTROS */
+
+div#body button {
+
+    /* Largura dos botões */
+    width: 80px;
+
+    /* Altura dos botões */
+    height: 30px;
+
+    /* Espaço acima */
+    margin-top: 20px;
+
+    /* Tamanho da letra */
+    font-size: 11px;
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+
+    /* Cria uma borda cinza */
+    border: 1px solid #c4c1c1;
+
+    /* Deixa os cantos arredondados */
+    border-radius: 25px;
+
+    /* Fundo branco */
+    background: white;
+
+    /* Cor do texto */
+    color: #020202;
+
+    /* Mostra a mãozinha ao passar o mouse */
+    cursor: pointer;
+
+    /* Define novamente o peso da fonte */
+    font-weight: 600;
+}
+
+
+/* ÁREA ONDE FICAM OS POKÉMON */
+
+#pokemon {
+
+    /* Ativa o sistema de grade */
+    display: grid;
+
+    /* Cria 3 colunas iguais */
+    grid-template-columns: repeat(3, 2fr);
+
+    /* Espaço entre os cards */
+    gap: 16px;
+
+    /* Espaço acima dos cards */
+    margin-top: 15px;
+}
+
+
+/* CARD DE CADA POKÉMON */
+
+.card {
+
+    /* Cor branca do card */
+    background: white;
+
+    /* Arredonda os cantos */
+    border-radius: 12px;
+
+    /* Espaço interno do card */
+    padding: 10px;
+
+    /* Altura do card */
+    height: 175px;
+
+}
+
+
+/* ÁREA DA IMAGEM DO POKÉMON */
+
+.imagem {
+
+    /* Permite posicionar o número #001,
+       #002, etc. dentro dessa área */
+    position: relative;
+
+    /* Altura da área da imagem */
+    height: 90px;
+
+    /* Cor do fundo */
+    background: #f5f6f7;
+
+    /* Arredonda os cantos */
+    border-radius: 8px;
+
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Centraliza a imagem verticalmente */
+    align-items: center;
+
+    /* Centraliza a imagem horizontalmente */
+    justify-content: center;
+}
+
+
+/* NÚMERO DO POKÉMON - Exemplo: #001*/
+
+.imagem span {
+
+    /* Permite posicionar o número livremente */
+    position: absolute;
+
+    /* Distância do topo */
+    top: 6px;
+
+    /* Distância da esquerda */
+    left: 6px;
+
+    /* Cor de fundo do número */
+    background: #b8babc;
+
+    /* Cor do texto */
+    color: white;
+
+    /* Tamanho da fonte */
+    font-size: 8px;
+
+    /* Texto em negrito */
+    font-weight: bold;
+
+    /* Espaço interno */
+    padding: 3px 6px;
+
+    /* Arredonda os cantos */
+    border-radius: 4px;
+}
+
+
+/* IMAGEM DO POKÉMON */
+
+.imagem img {
+
+    /* Largura da imagem */
+    width: 105px;
+
+    /* Altura da imagem */
+    height: 105px;
+
+    /* Faz a imagem caber sem deformar */
+    object-fit: contain;
+}
+
+
+/* NOME DO POKÉMON */
+
+.card h2 {
+
+    /* Espaçamento:
+       9px acima
+       0px direita
+       6px abaixo
+       0px esquerda */
+    margin: 9px 0 6px 0;
+
+    /* Tamanho do nome */
+    font-size: 13px;
+
+    /* Cor do nome */
+    color: #292929;
+}
+
+
+/* ÁREA DOS TIPOS */
+
+.tipos {
+
+    /* Coloca os tipos lado a lado */
+    display: flex;
+
+    /* Espaço entre os tipos */
+    gap: 5px;
+}
+
+
+/* ESTILO GERAL DOS TIPOS */
+
+.tipos label {
+
+    /* Espaço interno:
+       4px em cima/baixo
+       9px esquerda/direita */
+    padding: 4px 9px;
+
+    /* Arredonda os cantos */
+    border-radius: 5px;
+
+    /* Tamanho da fonte */
+    font-size: 8px;
+
+    /* Texto em negrito */
+    font-weight: bold;
+}
+
+
+/* TIPO PLANTA */
+
+.planta {
+
+    /* Fundo verde claro */
+    background: #d9f5ef;
+
+    /* Texto verde */
+    color: #20b89f;
+}
+
+
+/* TIPO VENENOSO */
+
+.venenoso {
+
+    /* Fundo roxo claro */
+    background: #f0ddf7;
+
+    /* Texto roxo */
+    color: #a64fc0;
+}
+
+
+/* TIPO FOGO */
+
+.fogo {
+
+    /* Fundo vermelho claro */
+    background: #ffe1e1;
+
+    /* Texto vermelho */
+    color: #e75d5d;
+}
+
+
+/* TIPO ÁGUA */
+
+.agua {
+
+    /* Fundo azul claro */
+    background: #e1ecff;
+
+    /* Texto azul */
+    color: #5189df;
+}
+
+
+/* TIPO VOADOR */
+
+.voador {
+
+    /* Fundo azul/roxo bem claro */
+    background: #e9edff;
+
+    /* Texto azul/roxo */
+    color: #687bc1;
+}
+
+
+/* TIPO LUTADOR */
+
+.lutador {
+
+    /* Fundo laranja claro */
+    background: #ffe6d8;
+
+    /* Texto laranja */
+    color: #df6c32;
+}

@@ -1,0 +1,490 @@
+<!-- Informa que estamos usando HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML e define o idioma como português -->
+<html lang="pt-br">
+
+<head>
+
+    <!-- Permite utilizar caracteres como ç, ã, é, ó etc. -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome que aparece na aba do navegador -->
+    <title>Pokédex Pro</title>
+
+    <!-- Conecta o arquivo CSS ao HTML -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!--  MENU LATERAL -->
+
+    <!--
+        div é uma divisão/caixa da página.
+
+        id="area" identifica essa área.
+
+        No CSS usamos:
+        div#area
+
+        para estilizar o menu lateral.
+    -->
+    <div id="area">
+
+
+        <!--
+            h1 é um título principal.
+
+            id="harea" identifica esse título
+            para podermos estilizar ele no CSS.
+        -->
+        <h1 id="harea"> 🔴 Pokédex Pro </h1>
+
+
+        <!--
+            button cria um botão.
+
+            type="button" define que é um botão comum.
+
+            id="pokedex" identifica esse botão.
+
+            Como sua página é apenas estática,
+            não precisamos do onclick.
+        -->
+        <button type="button" id="pokedex"> ⬤  Pokedex </button>
+
+
+        <!-- Botão de favoritos -->
+        <button type="button" id="bFavoritos"> ❤︎ Favoritos </button>
+
+
+        <!-- Botão de regiões -->
+        <button type="button" id="bregioes"> ➤ Regioes </button>
+
+    </div>
+
+
+
+    <!-- ÁREA PRINCIPAL DA PÁGINA -->
+
+    <!--
+        Essa div contém todo o conteúdo principal.
+
+        O CSS usa #body para deixar essa área
+        afastada do menu lateral.
+    -->
+    <div id="body">
+
+
+        <!-- Título principal da página -->
+        <h1 id="hbody">
+            Pokédex Pro
+        </h1>
+
+
+        <!-- Texto abaixo do título -->
+        <p id="pbody">
+            Explore mais de 1000 espécies
+        </p>
+
+
+
+        <!-- CAMPO DE PESQUISA -->
+
+        <!--
+            input cria um campo onde o usuário pode digitar.
+
+            type="text" significa que é um campo de texto.
+
+            id="pesquisa" permite estilizar esse campo no CSS.
+
+            placeholder é o texto que aparece enquanto
+            o usuário não digitou nada.
+        -->
+        <input type="text" id="pesquisa" placeholder="Busque por nome ou numero">
+
+
+
+        <!-- BOTÕES DE FILTRO -->
+
+        <!-- Botão para mostrar todos os Pokémon -->
+        <button type="button" id="btodos">
+            Todos
+        </button>
+
+
+        <!-- Botão para o tipo Fogo -->
+        <button type="button" id="bfogo">
+            Fogo
+        </button>
+
+
+        <!-- Botão para o tipo Água -->
+        <button type="button" id="bagua">
+            Agua
+        </button>
+
+
+        <!-- Botão para o tipo Planta -->
+        <button type="button" id="bplanta">
+            Planta
+        </button>
+
+
+        <!-- Botão para o tipo Elétrico -->
+        <button type="button" id="beletrico">
+            Eletrico
+        </button>
+
+
+
+        <!-- ÁREA DOS POKÉMON -->
+
+        <!--
+            Essa div é o "container" onde ficarão
+            todos os cards dos Pokémon.
+
+            O CSS transforma essa área em uma grade
+            usando display: grid.
+        -->
+        <div id="pokemon">
+
+
+
+            <!-- CARD DO BULBASAUR -->
+
+            <!--
+                Cada Pokémon possui uma div com
+                class="card".
+
+                CLASS é usada porque teremos vários cards.
+            -->
+            <div class="card">
+
+
+                <!-- Área onde ficará a imagem -->
+                <div class="imagem">
+
+                    <!-- Número do Pokémon -->
+                    <span>#001</span>
+
+
+                    <!--
+                        Imagem do Bulbasaur.
+
+                        src indica o endereço da imagem.
+
+                        alt seria uma descrição da imagem.
+                    -->
+                    <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+                        alt="Bulbasaur"
+                    >
+
+                </div>
+
+
+                <!-- Nome do Pokémon -->
+                <h2>
+                    Bulbasaur
+                </h2>
+
+
+                <!-- Área que contém os tipos -->
+                <div class="tipos">
+
+                    <!--
+                        class="planta" faz o CSS aplicar
+                        a cor do tipo Planta.
+                    -->
+                    <label class="planta">
+                        Planta
+                    </label>
+
+
+                    <!-- Tipo Venenoso -->
+                    <label class="venenoso">
+                        Venenoso
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!--  CARD DO IVYSAUR -->
+
+            <div class="card">
+
+                <div class="imagem">
+
+                    <!-- Número -->
+                    <span>#002</span>
+
+                    <!-- Imagem -->
+                    <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+                        alt="Ivysaur"
+                    >
+
+                </div>
+
+                <!-- Nome -->
+                <h2>
+                    Ivysaur
+                </h2>
+
+                <!-- Tipos -->
+                <div class="tipos">
+
+                    <label class="planta">
+                        Planta
+                    </label>
+
+                    <label class="venenoso">
+                        Venenoso
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD DO VENUSAUR -->
+
+            <div class="card">
+
+                <div class="imagem">
+
+                    <span>#003</span>
+
+                    <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
+                        alt="Venusaur"
+                    >
+
+                </div>
+
+                <h2>
+                    Venusaur
+                </h2>
+
+                <div class="tipos">
+
+                    <label class="planta">
+                        Planta
+                    </label>
+
+                    <label class="venenoso">
+                        Venenoso
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD DO CHARMANDER -->
+
+            <div class="card">
+
+                <div class="imagem">
+
+                    <span>#004</span>
+
+                    <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+                        alt="Charmander"
+                    >
+
+                </div>
+
+                <h2>
+                    Charmander
+                </h2>
+
+                <div class="tipos">
+
+                    <label class="fogo">
+                        Fogo
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD DO CHARMELEON -->
+
+            <div class="card">
+
+                <div class="imagem">
+
+                    <span>#005</span>
+
+                    <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
+                        alt="Charmeleon"
+                    >
+
+                </div>
+
+                <h2>
+                    Charmeleon
+                </h2>
+
+                <div class="tipos">
+
+                    <label class="fogo">
+                        Fogo
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD DO CHARIZARD -->
+
+            <div class="card">
+
+                <div class="imagem">
+
+                    <span>#006</span>
+
+                    <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                        alt="Charizard"
+                    >
+
+                </div>
+
+                <h2>
+                    Charizard
+                </h2>
+
+                <div class="tipos">
+
+                    <!-- Charizard possui o tipo Fogo -->
+                    <label class="fogo">
+                        Fogo
+                    </label>
+
+                    <!-- Charizard também possui o tipo Voador -->
+                    <label class="voador">
+                        Voador
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD DO SQUIRTLE -->
+
+            <div class="card">
+
+                <div class="imagem">
+
+                    <span>#007</span>
+
+                    <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+                        alt="Squirtle"
+                    >
+
+                </div>
+
+                <h2>
+                    Squirtle
+                </h2>
+
+                <div class="tipos">
+
+                    <label class="agua">
+                        Água
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD DO WARTORTLE -->
+
+            <div class="card">
+
+                <div class="imagem">
+
+                    <span>#008</span>
+
+                    <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
+                        alt="Wartortle"
+                    >
+
+                </div>
+
+                <h2>
+                    Wartortle
+                </h2>
+
+                <div class="tipos">
+
+                    <label class="agua">
+                        Água
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD DO BLASTOISE -->
+
+            <div class="card">
+
+                <div class="imagem">
+
+                    <span>#009</span>
+
+                    <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+                        alt="Blastoise"
+                    >
+
+                </div>
+
+                <h2>
+                    Blastoise
+                </h2>
+
+                <div class="tipos">
+
+                    <label class="agua">
+                        Água
+                    </label>
+
+                    <label class="lutador">
+                        Lutador
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
