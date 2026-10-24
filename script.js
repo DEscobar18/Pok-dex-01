@@ -60,8 +60,3 @@ document.getElementById('bagua').addEventListener('click', filtrarAgua)
 document.getElementById('bplanta').addEventListener('click', filtrarPlanta)
 document.getElementById('beletrico').addEventListener('click', filtrarEletrico)
 document.getElementById('btodos').addEventListener('click', mostrarTodos)
-
-
-var pesquisa = document.getElementById('pesquisa')
-
-console.log(pesquisa.value)
